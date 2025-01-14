@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Repositorio base del Curso de Introducción a React.js en Platzi
 
 ¡Hola, Platzinauta!
@@ -73,3 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# doltflow
+Organiza tu vida con un clic: nuestro aplicativo web de To-Do te permite crear, priorizar y gestionar tareas de forma rápida y sencilla. ¡Maximiza tu productividad y cumple tus metas sin complicaciones!
+>>>>>>> da13037d6daa3d19a25708a0e1cbefb71e6f4ba7
