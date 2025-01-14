@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/doltflow/static/css/main.c15954a9.chunk.css",
+    "main.js": "/doltflow/static/js/main.f47f4e8b.chunk.js",
+    "main.js.map": "/doltflow/static/js/main.f47f4e8b.chunk.js.map",
+    "runtime~main.js": "/doltflow/static/js/runtime~main.9f17ebeb.js",
+    "runtime~main.js.map": "/doltflow/static/js/runtime~main.9f17ebeb.js.map",
+    "static/js/2.30044b8a.chunk.js": "/doltflow/static/js/2.30044b8a.chunk.js",
+    "static/js/2.30044b8a.chunk.js.map": "/doltflow/static/js/2.30044b8a.chunk.js.map",
+    "index.html": "/doltflow/index.html",
+    "precache-manifest.d9ca63d84298c714350b10b6bfe50445.js": "/doltflow/precache-manifest.d9ca63d84298c714350b10b6bfe50445.js",
+    "service-worker.js": "/doltflow/service-worker.js",
+    "static/css/main.c15954a9.chunk.css.map": "/doltflow/static/css/main.c15954a9.chunk.css.map",
+    "static/media/check.96d04b3d.svg": "/doltflow/static/media/check.96d04b3d.svg",
+    "static/media/delete.1aba82df.svg": "/doltflow/static/media/delete.1aba82df.svg"
+  }
+}
