@@ -1,23 +1,27 @@
-import { CompleteIcon } from '../TodoIcon/CompleteIcon'
-import { DeleteIcon } from '../TodoIcon/DeleteIcon'
-import './TodoItem.css';
 import React from 'react';
+import { CompleteIcon } from '../TodoIcon/CompleteIcon';
+import { DeleteIcon } from '../TodoIcon/DeleteIcon';
+import './TodoItem.css';
 
-
-function TodoItem(props) {
+function TodoItem({ text, completed, onComplete, onDelete }) {
   return (
     <li className="TodoItem">
+      {/* Icono de completar tarea */}
       <CompleteIcon
-        completed={props.completed}
-        onComplete={props.onComplete}
+        completed={completed}
+        onComplete={onComplete}
+        aria-label={`Marcar como ${completed ? 'incompleta' : 'completa'} la tarea "${text}"`}
       />
 
-      <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
-        {props.text}
+      {/* Texto de la tarea */}
+      <p className={`TodoItem-p ${completed ? 'TodoItem-p--complete' : ''}`}>
+        {text}
       </p>
 
+      {/* Icono de eliminar tarea */}
       <DeleteIcon
-        onDelete={props.onDelete}
+        onDelete={onDelete}
+        aria-label={`Eliminar la tarea "${text}"`}
       />
     </li>
   );

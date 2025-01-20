@@ -1,8 +1,11 @@
 import React from 'react';
+import './TodosError.css'; // Añadimos un archivo de estilos para mejorar la UI
 
-function TodosError() {
+function TodosError({ errorMessage = 'Ocurrió un error, por favor intente nuevamente.' }) {
   return (
-    <p>Error...</p>
+    <div className="Error-container" role="alert" aria-live="assertive">
+      <p className="Error-message">{errorMessage}</p>
+    </div>
   );
 }
 

@@ -1,0 +1,30 @@
+/* Estilo para el contenedor de EmptyTodos */
+.EmptyTodos-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f7f6; /* Fondo suave para crear contraste */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra ligera para profundidad */
+    max-width: 400px;
+    margin: 20px auto; /* Centrado y espacio en los bordes */
+  }
+  
+  /* Estilo para el mensaje principal */
+  .EmptyTodos-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Color de texto más oscuro */
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para la descripción */
+  .EmptyTodos-description {
+    font-size: 1rem;
+    color: #555; /* Texto más claro para la descripción */
+    margin-top: 0;
+  }
+  

@@ -1,11 +1,21 @@
 .TodoCounter {
-  font-size: 24px;
+  font-size: 1.5rem; /* Usa unidades relativas para mejor escalabilidad */
   text-align: center;
-  margin: 0;
-  padding: 48px;
-  font-weight: normal;
+  margin: 0 auto; /* Centra el elemento dentro del contenedor */
+  padding: 32px 16px; /* Ajusta el espaciado para una mejor proporción */
+  font-weight: 400; /* Peso estándar para el texto normal */
+  color: #333; /* Gris oscuro para buena legibilidad */
+  line-height: 1.5; /* Mejora la legibilidad */
+  max-width: 600px; /* Limita el ancho en pantallas grandes */
 }
 
 .TodoCounter span {
-  font-weight: bold;
+  font-weight: 700; /* Mayor peso para destacar */
+  color: #61DAFA; /* Resalta con un color llamativo */
+  transition: color 0.3s ease; /* Añade una transición suave */
+}
+
+.TodoCounter span:hover {
+  color: #4CBED8; /* Oscurece el color al pasar el cursor */
+  text-decoration: underline; /* Añade un subrayado sutil para interactividad */
 }

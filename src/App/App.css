@@ -1,33 +1,59 @@
+/* Definición de colores como variables para facilitar la personalización */
+:root {
+  --primary-color: #233553;
+  --accent-color: #97ca3f;
+  --white: #ffffff;
+}
+
 .App {
   text-align: center;
+  font-family: Arial, sans-serif; /* Asegura una tipografía agradable y legible */
 }
 
+/* Mejora el tamaño de la imagen del logo */
 .App-logo {
   height: 40vmin;
-  pointer-events: none;
+  pointer-events: none; /* Evita la interacción con la imagen */
+  transition: transform 0.3s ease-in-out; /* Añadido para suavizar la transición de transformaciones */
 }
 
+/* Animación del logo con preferencia para usuarios con movimiento reducido */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* Encabezado principal: optimización para la alineación y responsividad */
 .App-header {
-  background-color: #233553;
+  background-color: var(--primary-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--white);
+  text-align: center; /* Alinea el texto de forma centralizada */
+  padding: 0 20px; /* Añadido un poco de relleno horizontal */
 }
 
+/* Estilo de los enlaces, con transiciones suaves */
 .App-link {
-  color: #97ca3f;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase; /* Transforma el texto a mayúsculas para consistencia */
+  transition: color 0.3s ease, transform 0.2s ease; /* Suaviza la transición al pasar el cursor */
 }
 
+/* Efecto hover en los enlaces */
+.App-link:hover {
+  color: #74b936; /* Color más claro para el hover */
+  transform: scale(1.05); /* Efecto de aumentar ligeramente el tamaño */
+}
+
+/* Animación del logo */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

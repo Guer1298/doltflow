@@ -1,13 +1,23 @@
+/* Estilos globales para la aplicación */
 body {
-  margin: 0;
-  padding: 0;
-  background: #F2F4F5;
-  color: #1E1E1F;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  margin: 0; /* Elimina los márgenes predeterminados */
+  padding: 0; /* Elimina el relleno predeterminado */
+  background-color: #F2F4F5; /* Fondo claro y neutro */
+  color: #1E1E1F; /* Texto principal en color oscuro */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif; /* Tipografía moderna y limpia */
+  font-size: 16px; /* Tamaño de fuente base para accesibilidad */
+  line-height: 1.5; /* Espaciado para mejorar la legibilidad */
+  -webkit-font-smoothing: antialiased; /* Suaviza la fuente en navegadores webkit */
+  -moz-osx-font-smoothing: grayscale; /* Suaviza la fuente en MacOS */
+  text-rendering: optimizeLegibility; /* Mejora la legibilidad del texto */
 }
 
 #root {
-  margin: 0 24px;
-  position: relative;
-  min-height: 100vh;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  padding: 0 24px; /* Espaciado interno en los laterales */
+  position: relative; /* Contexto de posición para elementos secundarios */
+  min-height: 100vh; /* Asegura que el contenido ocupe toda la altura de la ventana */
+  display: flex; /* Facilita la estructuración del diseño principal */
+  flex-direction: column; /* Organización vertical del contenido */
+  justify-content: center; /* Centra el contenido verticalmente si es necesario */
 }

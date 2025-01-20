@@ -1,12 +1,74 @@
+/* Fondo semitransparente para el modal */
 .ModalBackground {
-    background-color: rgba(32,35,41,.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  background-color: rgba(32, 35, 41, 0.8); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Asegura que cubra todo el ancho */
+  height: 100%; /* Asegura que cubra toda la altura */
+  z-index: 1000; /* Asegura que el modal esté sobre otros elementos */
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease; /* Transiciones suaves para la aparición/desaparición */
+  overflow: hidden; /* Evita el scroll del fondo cuando el modal está activo */
+  visibility: hidden; /* Inicia con visibilidad oculta */
+  transform: scale(0.9); /* Comienza con un tamaño reducido para la animación */
+}
+
+/* Estilo cuando el modal está visible */
+.ModalBackground.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1); /* El modal se escala a su tamaño original */
+}
+
+/* Estilo cuando el modal está oculto */
+.ModalBackground.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.9); /* Mantiene el modal con un tamaño reducido cuando está oculto */
+}
+
+/* Estilo para el contenido del modal */
+.ModalContent {
+  background-color: #fff; /* Fondo blanco para el contenido */
+  color: #333; /* Color de texto para el contenido */
+  padding: 2rem;
+  border-radius: 10px; /* Bordes redondeados */
+  width: 80%; /* Ancho del contenido del modal */
+  max-width: 600px; /* Ancho máximo para el contenido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para el contenido */
+  position: relative; /* Asegura que los elementos dentro del modal estén bien posicionados */
+  z-index: 1001; /* Asegura que el contenido esté por encima del fondo */
+}
+
+/* Estilos para el fondo del modal cuando el cursor está encima */
+.ModalBackground.visible:hover {
+  background-color: rgba(32, 35, 41, 0.9); /* Fondo ligeramente más oscuro al pasar el cursor */
+}
+
+/* Animación de entrada y salida para el modal */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
   }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+

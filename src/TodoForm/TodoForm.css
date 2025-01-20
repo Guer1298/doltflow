@@ -1,71 +1,96 @@
 form {
   width: 90%;
-  max-width: 300px;
-  background-color: #fff;
-  padding: 33px 40px;
+  max-width: 400px; /* Más ancho para comodidad visual */
+  background-color: #FFFFFF; /* Fondo blanco puro */
+  padding: 32px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  border-radius: 8px; /* Bordes redondeados para un diseño moderno */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-5px); /* Ligera elevación al pasar el cursor */
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15); /* Sombra más profunda */
 }
 
 label {
   text-align: center;
   font-weight: bold;
-  font-size: 20px;
-  color: #1E1E1F;
-  margin-bottom: 26px;
+  font-size: 18px;
+  color: #202329; /* Gris oscuro */
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 textarea {
-  background-color: #F9FBFC;
-  border: 2px solid #202329;
-  border-radius: 2px;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
-  color: #1E1E1F;
-  font-size: 20px;
-  text-align: center;
+  background-color: #F9FBFC; /* Fondo claro */
+  border: 1.5px solid #202329; /* Borde más fino */
+  border-radius: 4px; /* Bordes ligeramente redondeados */
+  box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra interior */
+  color: #202329;
+  font-size: 16px;
+  text-align: left; /* Mejor usabilidad para texto largo */
   padding: 12px;
-  height: 96px;
-  width: calc(100% - 25px);
+  height: 120px; /* Más espacio para escribir */
+  width: 100%;
+  resize: none; /* Evita el cambio de tamaño */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 textarea::placeholder {
-  color: #A5A5A5;
-  font-family: 'Montserrat';
+  color: #A5A5A5; /* Gris claro */
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
 textarea:focus {
-  outline-color: #61DAFA;
+  outline: none; /* Eliminar el borde por defecto */
+  border-color: #61DAFA; /* Azul llamativo */
+  box-shadow: 0 0 8px rgba(97, 218, 250, 0.5); /* Resaltar el campo */
 }
 
 .TodoForm-buttonContainer {
-  margin-top: 14px;
+  margin-top: 20px; /* Espaciado entre textarea y botones */
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
 }
 
 .TodoForm-button {
   cursor: pointer;
   display: inline-block;
-  font-size: 20px;
-  color: #202329;
-  font-weight: 400;
-  width: 120px;
-  height: 48px;
-  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 600; /* Botones más destacados */
+  padding: 10px 16px;
+  border-radius: 4px; /* Bordes más suaves */
   border: none;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.TodoForm-button:hover {
+  transform: translateY(-2px); /* Pequeño efecto de hover */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Sombra ligera al pasar el cursor */
 }
 
 .TodoForm-button--add {
   background: #61DAFA;
-  box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+  color: #FFFFFF;
+  box-shadow: 0px 5px 15px rgba(97, 218, 250, 0.4); /* Sombra sutil */
+}
+
+.TodoForm-button--add:hover {
+  background: #4CBED8; /* Oscurecer el botón al pasar el cursor */
 }
 
 .TodoForm-button--cancel {
-  background: transparent;
+  background: #F5F5F5; /* Fondo gris claro */
+  color: #202329;
+}
+
+.TodoForm-button--cancel:hover {
+  background: #E0E0E0; /* Fondo más oscuro en hover */
 }

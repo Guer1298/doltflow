@@ -25,8 +25,10 @@ function TodoForm() {
 
   return (
     <form onSubmit={onSubmit}>
-      <label>Esribe tu nuevo TODO</label>
+      {/* Usamos el atributo htmlFor para asociar el label con el textarea */}
+      <label htmlFor="newTodo">Escribe tu nuevo TODO</label>
       <textarea
+        id="newTodo" // Asegúrate de que el id coincida con el htmlFor del label
         placeholder="Cortar cebolla para el almuerzo"
         value={newTodoValue}
         onChange={onChange}

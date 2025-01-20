@@ -1,26 +1,41 @@
 .CreateTodoButton {
-  background-color: #61DAFA;
-  box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 50px;
-  position: fixed;
+  background-color: #61DAFA; /* Color principal del botón */
+  box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5); /* Sombra suave para un efecto flotante */
+  border: none; /* Eliminación de bordes */
+  border-radius: 50%; /* Forma circular */
+  cursor: pointer; /* Indicador interactivo */
+  font-size: 48px; /* Tamaño de la fuente optimizado */
+  font-weight: bold; /* Resalta el texto */
+  color: #FAFAFA; /* Texto claro */
+  position: fixed; /* Posición fija en la pantalla */
   bottom: 24px;
   right: 24px;
-  font-weight: bold;
-  color: #FAFAFA;
-  display: flex;
+  display: flex; /* Centrado interno */
   justify-content: center;
   align-items: center;
   height: 64px;
   width: 64px;
-  z-index: 1;
+  z-index: 100; /* Garantiza que esté por encima de otros elementos */
+  
+  transform: rotate(0); /* Rotación inicial */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transiciones suaves */
 
-  transform: rotate(0);
-  transition: .3s ease;
+  outline: none; /* Eliminar el contorno predeterminado al hacer clic */
 }
 
 .CreateTodoButton:hover {
-  transform: rotate(224deg);
+  transform: rotate(224deg); /* Rotación al pasar el cursor */
+  background-color: #4EC5E9; /* Cambia a un tono más oscuro al hacer hover */
+  box-shadow: 0px 8px 30px rgba(78, 197, 233, 0.7); /* Sombra más intensa para resaltar */
+}
+
+.CreateTodoButton:active {
+  transform: scale(0.9); /* Efecto de "clic" al presionar */
+  box-shadow: 0px 4px 20px rgba(78, 197, 233, 0.6); /* Sombra reducida */
+}
+
+.CreateTodoButton:focus {
+  outline: 3px solid #4EC5E9; /* Añadir un contorno visible cuando el botón esté en foco */
+  box-shadow: 0 0 10px rgba(78, 197, 233, 0.8); /* Sombra más suave para resaltar el foco */
+  transform: scale(1.05); /* Agrandar ligeramente el botón cuando está enfocado */
 }
